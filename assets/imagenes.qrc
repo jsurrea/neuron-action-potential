@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource prefix="/imagenes">
+	<file alias ="gorro.png">gorro.png</file>
+	<file alias ="pulpo.png">pulpo.png</file>
+</qresource>
+</RCC>
