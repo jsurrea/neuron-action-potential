@@ -21,3 +21,6 @@ Run the simulation:
 ```bash
 python src/interfaz.py
 ```
+
+<img width="1200" alt="Simulation" src="https://github.com/user-attachments/assets/5c776d77-5023-4e74-b3d4-deb997758012" />
+
