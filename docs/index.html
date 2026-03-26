@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuron Action Potential Simulation</title>
+  <base href="/neuron-action-potential/">
+  <meta name="description" content="Hodgkin–Huxley action potential simulation with PyQt5 and multiple numerical solvers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="hero">
+    <header class="container">
+      <h1>Neuron Action Potential Simulation</h1>
+      <p class="subtitle">PyQt5 application and Python modules for simulating neuronal action potentials with the Hodgkin–Huxley model using Euler, Runge-Kutta, and SciPy ODE solvers.</p>
+      <a class="cta" href="https://github.com/jsurrea/neuron-action-potential">View on GitHub</a>
+    </header>
+  </div>
+
+  <main class="container">
+    <section>
+      <h2>What it does</h2>
+      <div class="card">
+        <p>The core model is implemented in <code>src/modulo.py</code>. It computes the membrane voltage and channel gate dynamics and exposes the following solver functions: <code>EulerFor</code>, <code>EulerBack</code>, <code>EulerMod</code>, <code>RungeKutta2</code>, <code>RungeKutta4</code>, <code>scipy_solve</code>, and <code>scipy_odeint</code>.</p>
+        <p>The GUI in <code>src/interfaz.py</code> loads a Qt UI file, lets you configure initial conditions and stimulation currents, and plots voltage vs. time with Matplotlib.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Demo / Screenshot</h2>
+      <div class="grid grid-2">
+        <article class="card">
+          <img class="demo" src="assets/simulation-rk4.png" alt="Action potential plot generated with Runge-Kutta 4">
+          <p><small>Plot generated from <code>src/modulo.py</code> with a pulsed input current.</small></p>
+        </article>
+        <article class="card">
+          <img class="demo" src="assets/pulpo.png" alt="Project image resource from the UI assets">
+          <p><small>Existing UI image asset from <code>assets/pulpo.png</code>.</small></p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Tech stack</h2>
+      <div class="badges">
+        <img src="https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white" alt="Python">
+        <img src="https://img.shields.io/badge/GUI-PyQt5-41CD52?logo=qt&logoColor=white" alt="PyQt5">
+        <img src="https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white" alt="NumPy">
+        <img src="https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white" alt="SciPy">
+        <img src="https://img.shields.io/badge/Matplotlib-11557C" alt="Matplotlib">
+      </div>
+    </section>
+
+    <section>
+      <h2>Getting started</h2>
+      <div class="grid">
+        <div class="card">
+<pre><code>python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt</code></pre>
+        </div>
+        <div class="card">
+<pre><code>cp assets/bb.ui .
+python src/interfaz.py</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Project structure</h2>
+      <div class="card">
+<pre><code>.
+├── assets/
+│   ├── bb.ui
+│   ├── gorro.png
+│   ├── pulpo.png
+│   └── imagenes.qrc
+├── docs/
+│   ├── index.html
+│   └── assets/
+│       ├── style.css
+│       ├── simulation-rk4.png
+│       └── pulpo.png
+├── src/
+│   ├── interfaz.py
+│   ├── modulo.py
+│   ├── grafica.py
+│   └── imagenes.py
+├── requirements.txt
+└── LICENSE</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>License</h2>
+      <div class="card">
+        <p>MIT License. See <a href="https://github.com/jsurrea/neuron-action-potential/blob/main/LICENSE">LICENSE</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Built from repository sources in <code>jsurrea/neuron-action-potential</code>.</div>
+  </footer>
+</body>
+</html>
