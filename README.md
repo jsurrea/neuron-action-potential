@@ -22,6 +22,10 @@ Simulation of the neuronal action potential using the Hodgkin–Huxley model, wi
 
 The GUI entry point is `src/interfaz.py`, which connects UI controls to these methods and plots the membrane potential over time.
 
+## App demo
+
+![Neuron Action Potential app demo](docs/assets/demo-app.png)
+
 ## Installation
 
 ```bash
@@ -74,6 +78,7 @@ Generated from `src/modulo.py` using `RungeKutta4`:
 │   ├── index.html             # GitHub Pages site
 │   └── assets/
 │       ├── style.css
+│       ├── demo-app.png
 │       └── simulation-rk4.png
 ├── src/
 │   ├── interfaz.py            # PyQt5 GUI entry point
